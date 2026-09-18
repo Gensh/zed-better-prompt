@@ -1,4 +1,13 @@
-# Zed
+# Zed (Better Prompt)
+
+---
+
+This is just a fork of Zed where I've replaced the system prompt. While elegantly-*engineered*, the upstream prompt is itself very bad for agents and especially local agents. In particular:
+
+- **It's enormous!** Even though not all of it will be sent due to smart toggles, most of the universal guidance is verbose Claudese. This consumes a great deal of the context available on low-memory systems.
+- **It uses negative statements.** "Don't" is a bad word for LLMs. Negative statements make the Agent think about things it doesn't need to and make the Agent more likely to make a mistake and then backtrack rather than avoid to begin with. Almost all negative statements can be rephrased as positive guidance.
+
+---
 
 [![Zed](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zed-industries/zed/main/assets/badge/v0.json)](https://zed.dev)
 [![CI](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml/badge.svg)](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml)
